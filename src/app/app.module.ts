@@ -17,7 +17,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
@@ -26,6 +26,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+
+//Componentes do Projeto!
 import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
@@ -48,7 +50,6 @@ import { NavComponent } from './components/nav/nav.component';
     MatCheckboxModule,
     MatSnackBarModule,
     MatToolbarModule,
-    MatSidenavModule,
     MatButtonModule,
     MatSelectModule,
     MatInputModule,
@@ -56,7 +57,8 @@ import { NavComponent } from './components/nav/nav.component';
     MatTableModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
