@@ -8,3 +8,8 @@ img{
     height: 32rem;
 
 }
+p{
+    font-family: Roboto, "Helvetica Neue", sans-serif;  
+    font-size: small;
+    font-weight: 200;
+}
