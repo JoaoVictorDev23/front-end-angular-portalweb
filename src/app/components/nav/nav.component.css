@@ -4,7 +4,7 @@
 }
 .sidenav{
     width: 15rem;
-    color: white;
+    color:rgb(235,235,235);
     background: rgb(0,59,52);
     background: linear-gradient(19deg, rgba(0,59,52,1) 14%, rgba(76,134,120,1) 91%);  
 }
@@ -17,15 +17,37 @@ img {
   }
 
 .sidenav a{
-    color:white;
+    color:rgb(235,235,235);
 }
 .sidenav i{
     margin-right: .5rem;
 }
 
-.menu {
-    margin: 1rem 0 0 1rem;
-    color: white;
-    background:  rgba(76,134,120,1) 100%;
 
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.menu {
+    margin: 0;
+    color: rgb(235,235,235);
+    background: rgba(76, 134, 120, 1) 100%;
+}
+
+.custom-card {
+    border: none;
+    box-shadow: none;
+    width: 50%; /* Ajuste conforme necessário para centralizar o card */
+    color: #4c8678;
+    background: none;
+    font-size: large;
+    font-family: 'Luminari', fantasy;
+    text-align: center;
+    margin:auto;
+}
+.mat-card-content {
+    font-size: 1.2rem; /* Ajuste o tamanho da fonte conforme necessário */
 }

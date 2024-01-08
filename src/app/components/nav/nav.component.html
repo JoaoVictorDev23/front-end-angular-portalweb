@@ -27,11 +27,18 @@
     </mat-drawer>
   
     <div class="sidenav-content">
-      <button class="menu mat-elevation-z8" mat-button (click)="drawer.toggle()" mat-icon-button>
-        <mat-icon>menu</mat-icon>
-
-      </button>
-      <router-outlet></router-outlet>
+        <app-header></app-header>
+        <div class="content-container">
+            <button class="menu mat-elevation-z8" mat-button (click)="drawer.toggle()" mat-icon-button>
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-card class="custom-card">
+                <mat-card-content>Sistema de Tarifas e Rotas</mat-card-content>
+            </mat-card>
+        </div>
+        
+        <router-outlet></router-outlet>
     </div>
+    
    
   </mat-drawer-container>

@@ -1,0 +1,15 @@
+.container
+{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+}
+
+
+h1{
+    margin-top: 1rem;
+    color: #4c8678;
+    font-size: x-large;
+    font-family: 'Luminari', fantasy;
+}
