@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { UsuarioListComponent } from './components/usuarios/usuario-list/usuario-list.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
+  {path:'login', component:LoginComponent},
   {
     //Rota rota vazia para nav component
     path:'', component:NavComponent, children:[
