@@ -1,0 +1,72 @@
+.container{
+    overflow: hidden;
+    height: 100%;
+    /*background: rgb(0,59,52);
+    background: linear-gradient(19deg, rgba(0,59,52,1) 14%, rgba(76,134,120,1) 91%);  */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    margin: 0; /* Certifique-se de não haver margens padrão */
+    background-image: url('/assets/img/tdmrikally.jpeg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        background-position: center; /* Ajuste conforme necessário para dispositivos móveis */
+        
+    }
+}
+
+.form{
+    width: 22rem;
+    margin: auto;
+    background-color: rgb(235,235,235);
+    padding: 4rem 1rem;
+    border-radius: 1.3rem;
+    opacity: 95%;
+}
+
+  img {
+    
+    display: block;
+    margin-top: -3rem;
+    margin-bottom: -0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  button{
+    margin-top: 1.5rem;
+    
+  }
+
+  .full-width{
+    width: 100%;
+    
+    
+  }
+
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 3px; /* Adicione um espaçamento interno adequado conforme necessário */
+  }
+
+  .mat-form-field-label {
+    color: #333;
+  }
+  
+  .mat-input-element {
+    color: #555;
+  }
