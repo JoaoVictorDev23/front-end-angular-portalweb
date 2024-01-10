@@ -34,4 +34,7 @@ jwtservice: JwtHelperService = new JwtHelperService();
     }
     return false
   }
+  logout(){
+    localStorage.clear()
+  }
 }
