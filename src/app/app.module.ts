@@ -33,6 +33,7 @@ import { HomeComponent } from './components/home/home.component';
 import { UsuarioListComponent } from './components/usuarios/usuario-list/usuario-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthInterceptorProvider } from './interceptor/auth.interceptor';
 
 
 
@@ -74,7 +75,7 @@ import { ToastrModule } from 'ngx-toastr';
     })
     
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
