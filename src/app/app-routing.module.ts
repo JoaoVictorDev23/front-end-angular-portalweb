@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { UsuarioListComponent } from './components/usuarios/usuario-list/usuario-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
+import { UsuarioCreateComponent } from './components/usuarios/usuario-create/usuario-create.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
     children:[
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       {path: 'home', component: HomeComponent},
-      {path: 'usuarios', component: UsuarioListComponent}
+      {path: 'usuarios', component: UsuarioListComponent},
+      {path: 'usuarios/create', component: UsuarioCreateComponent}
  
     ]
   }
