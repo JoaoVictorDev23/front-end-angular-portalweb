@@ -11,7 +11,10 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {
     //Rota rota vazia para nav component
-    path:'', component:NavComponent, canActivate:[AuthGuard] , children:[
+    path:'', component:NavComponent, 
+    canActivate:[AuthGuard] , 
+    children:[
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
       {path: 'home', component: HomeComponent},
       {path: 'usuarios', component: UsuarioListComponent}
  
