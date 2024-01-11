@@ -11,10 +11,18 @@ export class UsuarioService {
 
   constructor(private http:HttpClient) { }
   
+  findById(id:any): Observable<usuario>{
+    return this.http.get<usuario>(`${API_CONFIG.baseUrl}/usuarios/${id}`);
+  }
+
   findAll(): Observable<usuario[]>{
     return this.http.get<usuario[]>(`${API_CONFIG.baseUrl}/usuarios`);
   }
   create(usuario: usuario): Observable<usuario>{
     return this.http.post<usuario>(`${API_CONFIG.baseUrl}/usuarios`, usuario);
+  }
+  update(usuario: usuario): Observable<usuario>{
+    return this.http.put<usuario>(`${API_CONFIG.baseUrl}/usuarios/${usuario.id}`, usuario);
+
   }
 }

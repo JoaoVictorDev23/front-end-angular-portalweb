@@ -28,7 +28,7 @@
             required
             matInput 
             placeholder="Ex. 000.000.000-00"
-            value="000.000.000-00"
+            mask="000.000.000-00"
             value="000.000.000-00">
             <mat-icon matSuffix>pin</mat-icon>
           </mat-form-field>
@@ -62,8 +62,8 @@
           <section class="section">
             <mat-checkbox (click)="addPerfil(1)" [checked]="true" class="margin" color="primary">Usuário</mat-checkbox>
             <mat-checkbox (click)="addPerfil(0)" class="margin" color="primary">Administrador</mat-checkbox>
-            <button routerLink="/usuarios" class="mat-elevation-z5" mat-flat-button color="warn">Cancelar</button>
-            <button (click)="create()" [disabled]="!validaCampos()" class="mat-elevation-z5 cadastrar-button" mat-flat-button>Cadastrar</button>
+            <button routerLink="../../" class="mat-elevation-z5" mat-flat-button color="warn">Cancelar</button>
+            <button (click)="update()" [disabled]="!validaCampos()" class="mat-elevation-z5 cadastrar-button" mat-flat-button>Atualizar</button>
 
           </section>
 

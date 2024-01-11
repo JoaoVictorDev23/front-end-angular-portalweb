@@ -1,0 +1,56 @@
+.container{
+    width: 30rem;
+    margin:auto;
+    margin-top:2rem;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: .6rem;
+    background-color: rgb(235,235,235);
+}
+.fullWidth{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+img {
+    display:block;
+    margin:auto; 
+    margin-bottom: 1rem;
+
+  }
+
+.section {
+
+    margin-top:  1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 2rem; /* Espaço entre os itens */
+}
+
+button{
+
+    width: 20%;
+    float: right;
+    background-color: #549d8b;
+    color:rgb(235,235,235);
+}
+
+.cadastrar-button{
+    margin-left: -1.1rem;
+    margin-right: -1rem;
+}
+.background-normal{
+    background-color: aliceblue;
+}
+.mat-checkbox.margin {
+    color: #407870;
+    font-weight: 500;
+}
+
+mat-icon{
+    opacity: .8;
+}
