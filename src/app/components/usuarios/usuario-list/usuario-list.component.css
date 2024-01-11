@@ -36,3 +36,12 @@ h1{
   text-align: left;
   margin:auto;
 }
+
+.edit{
+  color: #549d8b;
+  margin-right:0.4rem;
+}
+.delete{
+  color: red;
+  
+}
