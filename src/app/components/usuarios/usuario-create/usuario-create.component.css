@@ -46,3 +46,11 @@ button{
 .background-normal{
     background-color: aliceblue;
 }
+.mat-checkbox.margin {
+    color: #407870;
+    font-weight: 500;
+}
+
+mat-icon{
+    opacity: .8;
+}

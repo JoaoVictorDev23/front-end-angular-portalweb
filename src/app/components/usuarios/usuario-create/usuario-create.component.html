@@ -6,38 +6,65 @@
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Nome</mat-label>
-            <input matInput placeholder="Ex. Joao de Sá">
+            <input 
+            [(ngModel)]="user.nome"
+            name="nome"
+
+            [formControl] ="nome"
+            required
+            matInput 
+            placeholder="Ex. Joao de Sá"
+            maxlength="50">
             <mat-icon matSuffix>account_circle</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>CPF</mat-label>
-            <input matInput placeholder="Ex. 000.000.000-00">
+            <input 
+            [(ngModel)]="user.cpf"
+            name="cpf"
+
+            [formControl] ="cpf"
+            required
+            matInput 
+            placeholder="Ex. 000.000.000-00"
+            mask="000.000.000-00">
             <mat-icon matSuffix>pin</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>E-mail</mat-label>
-            <input matInput placeholder="Ex. joao@tdmlogistica.com">
+            <input 
+            [(ngModel)]="user.email"
+            name="email"
+
+            [formControl] ="email"
+            required
+            matInput 
+            placeholder="Ex. joao@tdmlogistica.com">
             <mat-icon matSuffix>mail</mat-icon>
           </mat-form-field>
 
           <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>Senha</mat-label>
-            <input type="password" matInput placeholder="Ex. 1234">
+            <input 
+            [(ngModel)]="user.senha"
+            name="senha"
+
+            [formControl] ="senha"
+            required
+            type="password" 
+            matInput placeholder="Ex. 1234">
             <mat-icon matSuffix>key</mat-icon>
           </mat-form-field>
 
           <section class="section">
-            <mat-checkbox class="margin">Usuário</mat-checkbox>
-            <mat-checkbox class="margin">Administrador</mat-checkbox>
-            <button class="mat-elevation-z5" mat-flat-button color="warn">Cancelar</button>
-            <button class="mat-elevation-z5 cadastrar-button" mat-flat-button>Cadastrar</button>
+            <mat-checkbox (click)="addPerfil(1)" class="margin" color="primary">Usuário</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(0)" class="margin" color="primary">Administrador</mat-checkbox>
+            <button routerLink="/usuarios" class="mat-elevation-z5" mat-flat-button color="warn">Cancelar</button>
+            <button (click)="create()" [disabled]="!validaCampos()" class="mat-elevation-z5 cadastrar-button" mat-flat-button>Cadastrar</button>
 
           </section>
-
-
-
 
     </form>
 </div>

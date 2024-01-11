@@ -14,4 +14,7 @@ export class UsuarioService {
   findAll(): Observable<usuario[]>{
     return this.http.get<usuario[]>(`${API_CONFIG.baseUrl}/usuarios`);
   }
+  create(usuario: usuario): Observable<usuario>{
+    return this.http.post<usuario>(`${API_CONFIG.baseUrl}/usuarios`, usuario);
+  }
 }

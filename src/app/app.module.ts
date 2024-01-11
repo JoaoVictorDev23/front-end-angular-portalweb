@@ -35,6 +35,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptor/auth.interceptor';
 import { UsuarioCreateComponent } from './components/usuarios/usuario-create/usuario-create.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 
@@ -68,12 +69,13 @@ import { UsuarioCreateComponent } from './components/usuarios/usuario-create/usu
     MatListModule,
     MatCardModule,
     MatSidenavModule,
+    NgxMaskModule.forRoot(),
     
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,
       progressBar: true
-    })
+    })  
     
   ],
   providers: [AuthInterceptorProvider],
