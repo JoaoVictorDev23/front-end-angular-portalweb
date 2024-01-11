@@ -1,1 +1,60 @@
-<p>usuario-delete works!</p>
+<div class="container mat-elevation-z5">
+    <form class="form">
+        
+        <img src="/assets/img/cadastrodeusuarios.png">
+        
+
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input 
+            [(ngModel)]="user.nome"
+            name="nome"
+            matInput 
+            [disabled]="true">
+            <mat-icon matSuffix>account_circle</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>CPF</mat-label>
+            <input 
+            [(ngModel)]="user.cpf"
+            name="cpf"
+
+            matInput 
+            [disabled]="true">
+            <mat-icon matSuffix>pin</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>E-mail</mat-label>
+            <input 
+            [(ngModel)]="user.email"
+            name="email"
+
+            matInput 
+            [disabled]="true">
+            <mat-icon matSuffix>mail</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Senha</mat-label>
+            <input 
+            [(ngModel)]="user.senha"
+            name="senha"
+
+            matInput 
+            type="password"
+            [disabled]="true">
+            <mat-icon matSuffix>key</mat-icon>
+          </mat-form-field>
+
+          <section class="section">
+            <mat-checkbox [disabled]="true" class="margin" color="primary">Usuário</mat-checkbox>
+            <mat-checkbox [disabled]="true" class="margin" color="primary">Administrador</mat-checkbox>
+            <button routerLink="../../" class="mat-elevation-z5" mat-flat-button color="warn">Cancelar</button>
+            <button (click)="delete()"  class="mat-elevation-z5 cadastrar-button" mat-flat-button>Deletar</button>
+
+          </section>
+
+    </form>
+</div>
