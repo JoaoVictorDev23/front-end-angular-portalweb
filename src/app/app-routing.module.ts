@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { UsuarioCreateComponent } from './components/usuarios/usuario-create/usuario-create.component';
 import { UsuarioUpdateComponent } from './components/usuarios/usuario-update/usuario-update.component';
+import { UsuarioDeleteComponent } from './components/usuarios/usuario-delete/usuario-delete.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
       {path: 'home', component: HomeComponent},
       {path: 'usuarios', component: UsuarioListComponent},
       {path: 'usuarios/create', component: UsuarioCreateComponent},
-      {path: 'usuarios/update/:id', component: UsuarioUpdateComponent}
+      {path: 'usuarios/update/:id', component: UsuarioUpdateComponent},
+      {path: 'usuarios/delete/:id', component: UsuarioDeleteComponent}
 
  
     ]
