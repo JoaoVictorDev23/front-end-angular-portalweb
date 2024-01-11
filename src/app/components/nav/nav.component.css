@@ -1,6 +1,6 @@
-.container {
+.app-container {
     height: 100%;
-    
+
 }
 .sidenav{
     width: 15rem;
@@ -28,7 +28,12 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: .5rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    background-color: rgb(235,235,235);
+
+    
+
 }
 
 .menu {
@@ -37,17 +42,14 @@ img {
     background: rgba(76, 134, 120, 1) 100%;
 }
 
-.custom-card {
-    border: none;
-    box-shadow: none;
-    width: 50%; /* Ajuste conforme necessário para centralizar o card */
-    color: #4c8678;
-    background: none;
-    font-size: large;
-    font-family: 'Luminari', fantasy;
-    text-align: center;
-    margin:auto;
+.last-image{
+    display:block;
+    margin:auto; 
+    margin-left: calc(100% - 66.7%); /* Centralizar a imagem no viewport */
+    width: 28%;
+    height: 4rem;
 }
+
 .mat-card-content {
     font-size: 1.2rem; /* Ajuste o tamanho da fonte conforme necessário */
 }
@@ -58,4 +60,6 @@ img {
     border-radius: 2px; /* Arredonda as bordas */
     box-shadow: 0 2px 4px rgba(17, 82, 67, 0.3); /* Adiciona uma sombra de caixa branca com opacidade de 0,5 */
 
+    
   }
+

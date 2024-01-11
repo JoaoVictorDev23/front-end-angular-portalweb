@@ -1,11 +1,13 @@
 .card-home {
-    width: 80%;
+    width: 70%;
     margin:  auto;
     background-color: rgb(235,235,235);
+    margin-top: 2rem;
+    
 }
 
 img{
-    height: 32rem;
+    height: 25rem;
 
 }
 p{

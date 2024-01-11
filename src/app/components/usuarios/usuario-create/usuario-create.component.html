@@ -1,1 +1,43 @@
-<p>usuario-create works!</p>
+<div class="container mat-elevation-z5">
+    <form class="form">
+        
+        <img src="/assets/img/cadastrodeusuarios.png">
+        
+
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="Ex. Joao de Sá">
+            <mat-icon matSuffix>account_circle</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>CPF</mat-label>
+            <input matInput placeholder="Ex. 000.000.000-00">
+            <mat-icon matSuffix>pin</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>E-mail</mat-label>
+            <input matInput placeholder="Ex. joao@tdmlogistica.com">
+            <mat-icon matSuffix>mail</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Senha</mat-label>
+            <input type="password" matInput placeholder="Ex. 1234">
+            <mat-icon matSuffix>key</mat-icon>
+          </mat-form-field>
+
+          <section class="section">
+            <mat-checkbox class="margin">Usuário</mat-checkbox>
+            <mat-checkbox class="margin">Administrador</mat-checkbox>
+            <button class="mat-elevation-z5" mat-flat-button color="warn">Cancelar</button>
+            <button class="mat-elevation-z5 cadastrar-button" mat-flat-button>Cadastrar</button>
+
+          </section>
+
+
+
+
+    </form>
+</div>
