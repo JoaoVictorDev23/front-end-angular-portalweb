@@ -54,7 +54,7 @@ export class UsuarioDeleteComponent implements OnInit {
         });
       }else{
         if(ex.error.message == "Forbidden"){
-          this.toast.error("Você não tem permissão para atualizar usuários!");
+          this.toast.error("Você não tem permissão para excluir esse usuário!");
         }else{        
           this.toast.error(ex.error.message);
         }
