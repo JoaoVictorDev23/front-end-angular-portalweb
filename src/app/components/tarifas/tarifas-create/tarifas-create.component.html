@@ -1,1 +1,58 @@
-<p>tarifas-create works!</p>
+<div class="container mat-elevation-z8">
+   
+    
+    <img src="" alt="Imagem aqui" class="fullWidth">
+    
+
+    <form class="form">
+        <mat-form-field  appearance="outline">
+          <mat-label>Inicio da Rota</mat-label>
+          <input matInput placeholder="Ex. Goiânia">
+        </mat-form-field>
+        <mat-form-field  appearance="outline">
+            <mat-label>Fim da Rota</mat-label>
+            <input matInput placeholder="Ex. Goiânia">
+          </mat-form-field>
+          <mat-form-field  appearance="outline">
+            <mat-label>Valor da Tarifa</mat-label>
+            <input matInput placeholder="Ex. 35.00 1000.35">
+          </mat-form-field>
+        
+      </form>
+    <div class="status">
+        <mat-form-field appearance="outline">
+            <mat-label>Selecione um Status</mat-label>
+            <mat-select>
+              <mat-option value="0">ABERTO</mat-option>
+              <mat-option value="1">PROCESSANDO</mat-option>
+              <mat-option value="2">ENCERRADO</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+
+    <div class="usuario">
+        <mat-form-field appearance="outline">
+            <mat-label>Selecione um Usuário</mat-label>
+            <mat-select>
+              <mat-option value="0">Valdir</mat-option>
+            </mat-select>
+          </mat-form-field>
+        
+    </div>
+
+    <form class="form">
+        <mat-form-field class="fullWidth" appearance="outline">
+          <mat-label>Observações</mat-label>
+          <textarea class="descricao" matInput placeholder="Ex. Detalhes dessa rota:"></textarea>
+        </mat-form-field>
+      </form>
+  <section class="section">
+    <button mat-raised-button color="primary">Cadastrar Tarifa</button>
+      
+    <button mat-raised-button color="warn">Cancelar</button>
+
+  </section>
+
+
+
+</div>

@@ -9,6 +9,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { UsuarioCreateComponent } from './components/usuarios/usuario-create/usuario-create.component';
 import { UsuarioUpdateComponent } from './components/usuarios/usuario-update/usuario-update.component';
 import { UsuarioDeleteComponent } from './components/usuarios/usuario-delete/usuario-delete.component';
+import { TarifasCreateComponent } from './components/tarifas/tarifas-create/tarifas-create.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,9 @@ const routes: Routes = [
       {path: 'usuarios/update/:id', component: UsuarioUpdateComponent},
       {path: 'usuarios/delete/:id', component: UsuarioDeleteComponent},
 
-      {path: 'tarifas',             component: TarifaListComponent}
+      {path: 'tarifas',             component: TarifaListComponent},
+      {path: 'tarifas/create',      component: TarifasCreateComponent}
+
 
 
 

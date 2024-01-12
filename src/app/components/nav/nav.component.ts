@@ -15,7 +15,7 @@ export class NavComponent implements OnInit {
     private toast: ToastrService) { }
 
   ngOnInit(): void {
-    this.router.navigate(['tarifas'])
+    this.router.navigate(['tarifas/create'])
   }
 
   logout(){
