@@ -7,22 +7,33 @@
     <form class="form">
         <mat-form-field  appearance="outline">
           <mat-label>Inicio da Rota</mat-label>
-          <input matInput placeholder="Ex. Goiânia">
+          <input 
+          [formControl]="inicioRota"
+          required
+          matInput placeholder="Ex. Goiânia">
         </mat-form-field>
         <mat-form-field  appearance="outline">
             <mat-label>Fim da Rota</mat-label>
-            <input matInput placeholder="Ex. Goiânia">
+            <input 
+            [formControl]="fimRota"
+            required
+            matInput placeholder="Ex. Goiânia">
           </mat-form-field>
           <mat-form-field  appearance="outline">
             <mat-label>Valor da Tarifa</mat-label>
-            <input matInput placeholder="Ex. 35.00 1000.35">
+            <input 
+            [formControl]="valorTarifa"
+            required
+            matInput placeholder="Ex. 35.00 1000.35">
           </mat-form-field>
         
       </form>
     <div class="status">
         <mat-form-field appearance="outline">
             <mat-label>Selecione um Status</mat-label>
-            <mat-select>
+            <mat-select 
+            [formControl]="status"
+            required>
               <mat-option value="0">ABERTO</mat-option>
               <mat-option value="1">PROCESSANDO</mat-option>
               <mat-option value="2">ENCERRADO</mat-option>
@@ -33,7 +44,8 @@
     <div class="usuario">
         <mat-form-field appearance="outline">
             <mat-label>Selecione um Usuário</mat-label>
-            <mat-select>
+            <mat-select  [formControl]="usuario"
+            required>
               <mat-option value="0">Valdir</mat-option>
             </mat-select>
           </mat-form-field>
@@ -43,11 +55,12 @@
     <form class="form">
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Observações</mat-label>
-          <textarea class="descricao" matInput placeholder="Ex. Detalhes dessa rota:"></textarea>
+          <textarea  [formControl]="observacao"
+          required class="descricao" matInput placeholder="Ex. Detalhes dessa rota:"></textarea>
         </mat-form-field>
       </form>
   <section class="section">
-    <button mat-raised-button color="primary">Cadastrar Tarifa</button>
+    <button [disabled]="!validaCampos()"  mat-raised-button color="primary">Cadastrar Tarifa</button>
       
     <button mat-raised-button color="warn">Cancelar</button>
 
