@@ -38,6 +38,7 @@ import { UsuarioCreateComponent } from './components/usuarios/usuario-create/usu
 import { NgxMaskModule } from 'ngx-mask';
 import { UsuarioUpdateComponent } from './components/usuarios/usuario-update/usuario-update.component';
 import { UsuarioDeleteComponent } from './components/usuarios/usuario-delete/usuario-delete.component';
+import { TarifaListComponent } from './components/tarifas/tarifa-list/tarifa-list.component';
 
 
 
@@ -45,7 +46,7 @@ import { UsuarioDeleteComponent } from './components/usuarios/usuario-delete/usu
   declarations: [
     AppComponent,   
     NavComponent, 
-    HomeComponent, UsuarioListComponent, LoginComponent, UsuarioCreateComponent, UsuarioUpdateComponent, UsuarioDeleteComponent],
+    HomeComponent, UsuarioListComponent, LoginComponent, UsuarioCreateComponent, UsuarioUpdateComponent, UsuarioDeleteComponent, TarifaListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

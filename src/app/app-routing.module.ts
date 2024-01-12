@@ -1,3 +1,4 @@
+import { TarifaListComponent } from './components/tarifas/tarifa-list/tarifa-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NavComponent } from './components/nav/nav.component';
@@ -18,11 +19,17 @@ const routes: Routes = [
     canActivate:[AuthGuard] , 
     children:[
       { path: '', redirectTo: 'home', pathMatch: 'full' },
-      {path: 'home', component: HomeComponent},
-      {path: 'usuarios', component: UsuarioListComponent},
-      {path: 'usuarios/create', component: UsuarioCreateComponent},
+      {path: 'home',                component: HomeComponent},
+
+      {path: 'usuarios',            component: UsuarioListComponent},
+      {path: 'usuarios/create',     component: UsuarioCreateComponent},
       {path: 'usuarios/update/:id', component: UsuarioUpdateComponent},
-      {path: 'usuarios/delete/:id', component: UsuarioDeleteComponent}
+      {path: 'usuarios/delete/:id', component: UsuarioDeleteComponent},
+
+      {path: 'tarifas',             component: TarifaListComponent}
+
+
+
 
  
     ]
