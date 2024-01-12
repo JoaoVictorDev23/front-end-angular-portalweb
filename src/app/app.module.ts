@@ -39,6 +39,7 @@ import { NgxMaskModule } from 'ngx-mask';
 import { UsuarioUpdateComponent } from './components/usuarios/usuario-update/usuario-update.component';
 import { UsuarioDeleteComponent } from './components/usuarios/usuario-delete/usuario-delete.component';
 import { TarifaListComponent } from './components/tarifas/tarifa-list/tarifa-list.component';
+import { TarifasCreateComponent } from './components/tarifas/tarifas-create/tarifas-create.component';
 
 
 
@@ -46,7 +47,7 @@ import { TarifaListComponent } from './components/tarifas/tarifa-list/tarifa-lis
   declarations: [
     AppComponent,   
     NavComponent, 
-    HomeComponent, UsuarioListComponent, LoginComponent, UsuarioCreateComponent, UsuarioUpdateComponent, UsuarioDeleteComponent, TarifaListComponent],
+    HomeComponent, UsuarioListComponent, LoginComponent, UsuarioCreateComponent, UsuarioUpdateComponent, UsuarioDeleteComponent, TarifaListComponent, TarifasCreateComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
