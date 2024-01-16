@@ -15,4 +15,7 @@ export class TarifasService {
   findAll(): Observable<tarifas[]>{
     return this.http.get<tarifas[]>(`${API_CONFIG.baseUrl}/tarifas`)
   }
+  create(tarifa: tarifas): Observable<tarifas>{
+    return this.http.post<tarifas>(`${API_CONFIG.baseUrl}/tarifas`, tarifa)
+  }
 }

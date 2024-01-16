@@ -95,8 +95,9 @@
               "browserTarget": "helpdesk:build:production"
             },
             "development": {
-              "browserTarget": "helpdesk:build:development"
-            }
+              "browserTarget": "helpdesk:build:development",
+              "host": "0.0.0.0"
+            } 
           },
           "defaultConfiguration": "development"
         },

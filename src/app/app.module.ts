@@ -40,6 +40,10 @@ import { UsuarioUpdateComponent } from './components/usuarios/usuario-update/usu
 import { UsuarioDeleteComponent } from './components/usuarios/usuario-delete/usuario-delete.component';
 import { TarifaListComponent } from './components/tarifas/tarifa-list/tarifa-list.component';
 import { TarifasCreateComponent } from './components/tarifas/tarifas-create/tarifas-create.component';
+import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
+import { InjectionToken } from '@angular/core';
+
+
 
 
 
@@ -72,6 +76,7 @@ import { TarifasCreateComponent } from './components/tarifas/tarifas-create/tari
     MatListModule,
     MatCardModule,
     MatSidenavModule,
+  
     NgxMaskModule.forRoot(),
     
     ToastrModule.forRoot({
@@ -81,7 +86,9 @@ import { TarifasCreateComponent } from './components/tarifas/tarifas-create/tari
     })  
     
   ],
-  providers: [AuthInterceptorProvider],
+  providers: [{ provide: JWT_OPTIONS, useValue: {} },
+    JwtHelperService,,AuthInterceptorProvider],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

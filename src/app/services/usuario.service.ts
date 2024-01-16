@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { API_CONFIG } from '../config/api.config';
 import { Observable } from 'rxjs';
 import { usuario } from '../models/usuario';
+import { JwtHelperService } from '@auth0/angular-jwt'; // Importe o serviço JwtHelperService
 
 @Injectable({
   providedIn: 'root'
@@ -28,4 +29,5 @@ export class UsuarioService {
   delete(id: any): Observable<usuario>{
     return this.http.delete<usuario>(`${API_CONFIG.baseUrl}/usuarios/${id}`)
   }
+  
 }

@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { credenciais } from '../models/credenciais';
+import { usuario } from '../models/usuario';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -36,5 +38,12 @@ jwtservice: JwtHelperService = new JwtHelperService();
   }
   logout(){
     localStorage.clear()
+  } 
+
+  getUsuarioLogado(): string | null {
+    const token = localStorage.getItem('token');
+    return token ? this.jwtservice.decodeToken(token)?.sub : null;
   }
+
+
 }

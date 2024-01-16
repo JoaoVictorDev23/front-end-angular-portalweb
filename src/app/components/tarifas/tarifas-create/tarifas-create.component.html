@@ -1,27 +1,32 @@
 <div class="container mat-elevation-z8">
    
     
-    <img src="" alt="Imagem aqui" class="fullWidth">
+    <img src="/assets/img/cadastrodeusuarios.png">
     
 
     <form class="form">
         <mat-form-field  appearance="outline">
           <mat-label>Inicio da Rota</mat-label>
-          <input 
+          <input
+          [(ngModel)]="tarifaModel.inicioRota"
           [formControl]="inicioRota"
           required
           matInput placeholder="Ex. Goiânia">
         </mat-form-field>
+
         <mat-form-field  appearance="outline">
             <mat-label>Fim da Rota</mat-label>
-            <input 
+            <input
+            [(ngModel)]="tarifaModel.fimRota" 
             [formControl]="fimRota"
             required
             matInput placeholder="Ex. Goiânia">
           </mat-form-field>
+
           <mat-form-field  appearance="outline">
             <mat-label>Valor da Tarifa</mat-label>
             <input 
+            [(ngModel)]="tarifaModel.valorTarifa" 
             [formControl]="valorTarifa"
             required
             matInput placeholder="Ex. 35.00 1000.35">
@@ -32,6 +37,7 @@
         <mat-form-field appearance="outline">
             <mat-label>Selecione um Status</mat-label>
             <mat-select 
+            [(ngModel)]="tarifaModel.status" 
             [formControl]="status"
             required>
               <mat-option value="0">ABERTO</mat-option>
@@ -42,25 +48,26 @@
     </div>
 
     <div class="usuario">
-        <mat-form-field appearance="outline">
-            <mat-label>Selecione um Usuário</mat-label>
-            <mat-select  [formControl]="usuario"
-            required>
-              <mat-option value="0">Valdir</mat-option>
-            </mat-select>
-          </mat-form-field>
-        
+      <mat-form-field appearance="outline">
+        <mat-label>Selecione um Usuário</mat-label>
+        <mat-select [(ngModel)]="tarifaModel.usuario" [formControl]="usuario" required>
+          <!-- Adiciona uma opção dinâmica com o nome do usuário logado -->
+          <mat-option [value]="userEmail">{{ userEmail}}</mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
 
     <form class="form">
         <mat-form-field class="fullWidth" appearance="outline">
           <mat-label>Observações</mat-label>
-          <textarea  [formControl]="observacao"
+          <textarea  
+          [(ngModel)]="tarifaModel.observacao" 
+          [formControl]="observacao"
           required class="descricao" matInput placeholder="Ex. Detalhes dessa rota:"></textarea>
         </mat-form-field>
       </form>
   <section class="section">
-    <button [disabled]="!validaCampos()"  mat-raised-button color="primary">Cadastrar Tarifa</button>
+    <button (click)="create()" [disabled]="!validaCampos()"  mat-raised-button color="primary">Cadastrar Tarifa</button>
       
     <button mat-raised-button color="warn">Cancelar</button>
 
