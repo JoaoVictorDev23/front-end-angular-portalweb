@@ -30,4 +30,7 @@ export class UsuarioService {
     return this.http.delete<usuario>(`${API_CONFIG.baseUrl}/usuarios/${id}`)
   }
   
+  findbyemail(email: string): Observable<number> {
+    return this.http.get<number>(`${API_CONFIG.baseUrl}/usuarios/email/${email}`);
+  }
 }

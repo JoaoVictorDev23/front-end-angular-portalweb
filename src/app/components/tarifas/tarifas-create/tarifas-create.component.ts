@@ -31,7 +31,7 @@ export class TarifasCreateComponent implements OnInit {
 
   inicioRota:    FormControl = new FormControl(null, [Validators.required]);
   fimRota:       FormControl = new FormControl(null, [Validators.required]);
-  valorTarifa:   FormControl = new FormControl(null, [Validators.required]);
+  valorTarifa:   FormControl = new FormControl(null, [Validators.required,  Validators.pattern(/^\d+(\.\d+)?$/)]);
   status:        FormControl = new FormControl(null, [Validators.required]);
   usuario:       FormControl = new FormControl(null, [Validators.required]);
   observacao:    FormControl = new FormControl(null, [Validators.required]);
@@ -40,7 +40,8 @@ export class TarifasCreateComponent implements OnInit {
               private tarifaService: TarifasService,
               private toastService: ToastrService,
               private router: Router,
-              private authService: AuthService
+              private authService: AuthService,
+              private usuarioService: UsuarioService
 
               ) { }
 
@@ -50,14 +51,43 @@ export class TarifasCreateComponent implements OnInit {
      console.log('Email do Usuário Logado:', this.userEmail);
    }
   create(): void {
-    this.tarifaService.create(this.tarifaModel).subscribe(resposta =>
-      {
-        this.toastService.success('Tarifa criada com sucesso!','Nova Tarifa!');
-        this.router.navigate(['tarifas'])
-      }, ex =>{
-        this.toastService.error(ex.error.error);
-      })
+     // Certifique-se de que os campos obrigatórios estão preenchidos
+     if (
+      this.inicioRota.valid &&
+      this.fimRota.valid &&
+      this.valorTarifa.valid &&
+      this.status.valid &&
+      this.usuario.valid &&
+      this.observacao.valid
+    ) {
+      // Chama o serviço para buscar o ID do usuário pelo email
+      this.usuarioService.findbyemail(this.userEmail).subscribe(
+        idUsuario => {
+          // Agora temos o ID do usuário, podemos configurar o campo 'usuario' do objeto tarifaModel
+          this.tarifaModel.usuario = idUsuario.toString();
+
+          // Chama o serviço para criar a tarifa
+          this.tarifaService.create(this.tarifaModel).subscribe(
+            resposta => {
+              this.toastService.success('Tarifa criada com sucesso!', 'Nova Tarifa!');
+              this.router.navigate(['tarifas']);
+            },
+            ex => {
+              this.toastService.error(ex.error.error);
+            }
+          );
+        },
+        error => {
+          console.error('Erro ao buscar ID do usuário por email', error);
+          // Lógica de tratamento de erro, se necessário
+        }
+      );
+    } else {
+      // Lógica de tratamento caso os campos obrigatórios não estejam preenchidos
+      this.toastService.error('Preencha todos os campos obrigatórios.');
+    }
   }
+  
 
 
 
