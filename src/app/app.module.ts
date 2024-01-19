@@ -43,6 +43,7 @@ import { TarifasCreateComponent } from './components/tarifas/tarifas-create/tari
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { InjectionToken } from '@angular/core';
 import { TarifasUpdateComponent } from './components/tarifas/tarifas-update/tarifas-update.component';
+import { TarifaReadComponent } from './components/tarifas/tarifa-read/tarifa-read.component';
 
 
 
@@ -52,7 +53,7 @@ import { TarifasUpdateComponent } from './components/tarifas/tarifas-update/tari
   declarations: [
     AppComponent,   
     NavComponent, 
-    HomeComponent, UsuarioListComponent, LoginComponent, UsuarioCreateComponent, UsuarioUpdateComponent, UsuarioDeleteComponent, TarifaListComponent, TarifasCreateComponent, TarifasUpdateComponent],
+    HomeComponent, UsuarioListComponent, LoginComponent, UsuarioCreateComponent, UsuarioUpdateComponent, UsuarioDeleteComponent, TarifaListComponent, TarifasCreateComponent, TarifasUpdateComponent, TarifaReadComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
