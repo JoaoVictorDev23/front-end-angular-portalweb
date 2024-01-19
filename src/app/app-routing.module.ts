@@ -10,6 +10,7 @@ import { UsuarioCreateComponent } from './components/usuarios/usuario-create/usu
 import { UsuarioUpdateComponent } from './components/usuarios/usuario-update/usuario-update.component';
 import { UsuarioDeleteComponent } from './components/usuarios/usuario-delete/usuario-delete.component';
 import { TarifasCreateComponent } from './components/tarifas/tarifas-create/tarifas-create.component';
+import { TarifasUpdateComponent } from './components/tarifas/tarifas-update/tarifas-update.component';
 
 
 const routes: Routes = [
@@ -27,8 +28,10 @@ const routes: Routes = [
       {path: 'usuarios/update/:id', component: UsuarioUpdateComponent},
       {path: 'usuarios/delete/:id', component: UsuarioDeleteComponent},
 
-      {path: 'tarifas',             component: TarifaListComponent},
-      {path: 'tarifas/create',      component: TarifasCreateComponent}
+      {path: 'tarifas',                 component: TarifaListComponent},
+      {path: 'tarifas/create',          component: TarifasCreateComponent},
+      {path: 'tarifas/update/:id',      component: TarifasUpdateComponent},
+
 
 
 

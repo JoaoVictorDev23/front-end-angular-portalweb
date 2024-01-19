@@ -1,0 +1,32 @@
+.container{
+    width: 45%;
+    margin: auto;
+    margin-top: 2rem;
+    padding:1rem;
+    border-radius: 1rem;
+}
+.fullWidth{
+    width: 100%;
+}
+
+h1, img{
+    text-align: center;
+}
+mat-form-field {
+    width: 100%;
+
+}
+.descricao {
+    min-height: 6rem;
+    max-height: 10rem;
+}
+.section {
+
+    margin-top:  1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 2rem; /* Espaço entre os itens */
+}
