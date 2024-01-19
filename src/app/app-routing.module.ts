@@ -13,6 +13,7 @@ import { TarifasCreateComponent } from './components/tarifas/tarifas-create/tari
 import { TarifasUpdateComponent } from './components/tarifas/tarifas-update/tarifas-update.component';
 
 
+
 const routes: Routes = [
   {path:'login', component:LoginComponent},
   {
@@ -30,14 +31,7 @@ const routes: Routes = [
 
       {path: 'tarifas',                 component: TarifaListComponent},
       {path: 'tarifas/create',          component: TarifasCreateComponent},
-      {path: 'tarifas/update/:id',      component: TarifasUpdateComponent},
-
-
-
-
-
-
- 
+      {path: 'tarifas/update/:id',      component: TarifasUpdateComponent}
     ]
   }
 ];

@@ -50,11 +50,10 @@ export class TarifasUpdateComponent implements OnInit {
 
  const idParam = this.route.snapshot.paramMap.get('id');
   this.tarifaModel.id = idParam ? parseInt(idParam, 10) : 0; // 10 é a base numérica
-  console.log('ID da Tarifa:', this.tarifaModel.id, typeof this.tarifaModel.id);
+
 
     this.findById();
      this.userEmail = this.authService.getUsuarioLogado();
-     console.log('Email do Usuário Logado:', this.userEmail);
    }
    findById():void {
     this.tarifaService.findById(this.tarifaModel.id).subscribe(
