@@ -54,7 +54,7 @@ export class TarifasCreateComponent implements OnInit {
      // Certifique-se de que os campos obrigatórios estão preenchidos
      if (
       this.inicioRota.valid &&
-      this.fimRota.valid &&
+      this.fimRota.valid && 
       this.valorTarifa.valid &&
       this.status.valid &&
       this.usuario.valid &&

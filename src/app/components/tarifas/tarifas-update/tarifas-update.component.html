@@ -35,7 +35,7 @@
       </form>
     <div class="status">
         <mat-form-field appearance="outline">
-            <mat-label>Selecione um Status</mat-label>
+            <mat-label>{{ retornaStatus(tarifaModel.status)}}</mat-label>
             <mat-select 
             [(ngModel)]="tarifaModel.status" 
             [formControl]="status"
@@ -67,7 +67,7 @@
         </mat-form-field>
       </form>
   <section class="section">
-    <button (click)="create()" [disabled]="!validaCampos()"  mat-raised-button color="primary">Atualizar Tarifa</button>
+    <button (click)="update()" [disabled]="!validaCampos()"  mat-raised-button color="primary">Atualizar Tarifa</button>
       
     <button mat-raised-button color="warn" routerLink="../">Cancelar</button>
 

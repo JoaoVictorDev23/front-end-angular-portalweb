@@ -11,11 +11,17 @@ export class TarifasService {
 
   constructor(private http: HttpClient) { }
  
+  findById(id: any): Observable<tarifas>{
+    return this.http.get<tarifas>(`${API_CONFIG.baseUrl}/tarifas/${id}`)
+    }
 
   findAll(): Observable<tarifas[]>{
     return this.http.get<tarifas[]>(`${API_CONFIG.baseUrl}/tarifas`)
   }
   create(tarifa: tarifas): Observable<tarifas>{
     return this.http.post<tarifas>(`${API_CONFIG.baseUrl}/tarifas`, tarifa)
+  }
+  update(tarifa: tarifas): Observable<tarifas>{
+    return this.http.put<tarifas>(`${API_CONFIG.baseUrl}/tarifas/${tarifa.id}`, tarifa);
   }
 }
